@@ -4,6 +4,17 @@ class Frontend extends ApiFrontend {
     public $api_base_path;
     function init() {
         parent::init();
+        //$this->dbConnect();
+        $this->requires('atk','4.3.0.dev');
+        $this->add('jUI');
+
+        $this->menu = $this->add('Menu_Horizontal');
+        $this->menu->addItem('Home', 'index');
+        $this->menu->addItem(['Home', 'icon'=>'gauge'], 'index');
+        $this->menu->addItem(['Logout', 'icon'=>'users'], 'logout');
+
+
+
 
         /*$this->api_public_path = dirname(@$_SERVER['SCRIPT_FILENAME']);
         $this->api_base_path = dirname(dirname(@$_SERVER['SCRIPT_FILENAME']));
