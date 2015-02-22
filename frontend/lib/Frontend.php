@@ -8,10 +8,9 @@ class Frontend extends ApiFrontend {
         $this->requires('atk','4.3.0.dev');
         $this->add('jUI');
 
-        $this->menu = $this->add('Menu_Horizontal');
-        $this->menu->addItem('Home', 'index');
-        $this->menu->addItem(['Home', 'icon'=>'gauge'], 'index');
-        $this->menu->addItem(['Logout', 'icon'=>'users'], 'logout');
+        $this->menu = $this->add('Menu',null,'Menu');
+        $this->menu->addItem('Welcome','index');
+        $this->menu->addItem('logout');
 
 
 
