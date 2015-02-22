@@ -4,7 +4,8 @@ class Frontend extends ApiFrontend {
     public $api_base_path;
     function init() {
         parent::init();
-        $this->api_public_path = dirname(@$_SERVER['SCRIPT_FILENAME']);
+
+        /*$this->api_public_path = dirname(@$_SERVER['SCRIPT_FILENAME']);
         $this->api_base_path = dirname(dirname(@$_SERVER['SCRIPT_FILENAME']));
 
         $this->add('Layout_Centered');
@@ -14,10 +15,10 @@ class Frontend extends ApiFrontend {
         $this->addProjectLocations();
         $this->addAddonsLocations();
         $this->add('jUI');
-        $this->initAddons();
+        $this->initAddons();*/
     }
 
-    function addLocations() {
+    /*function addLocations() {
         $this->api->pathfinder->base_location->defineContents(array(
             'docs'=>array('docs','doc'),   // Documentation (external)
             'content'=>'content',          // Content in MD format
@@ -55,7 +56,7 @@ class Frontend extends ApiFrontend {
             foreach ($objects as $obj) {
                 // Private location contains templates and php files YOU develop yourself
                 /*$this->private_location = */
-                $this->api->pathfinder->addLocation(array(
+                /*$this->api->pathfinder->addLocation(array(
                     'docs'      => 'docs',
                     'php'       => 'lib',
                     'template'  => 'templates',
@@ -66,7 +67,7 @@ class Frontend extends ApiFrontend {
                 $addon_public = $obj->addon_symlink_name;
                 // this public location cotains YOUR js, css and images, but not templates
                 /*$this->public_location = */
-                $this->api->pathfinder->addLocation(array(
+                /*$this->api->pathfinder->addLocation(array(
                     'js'     => 'js',
                     'css'    => 'css',
                     'public' => './',
@@ -126,7 +127,7 @@ class Frontend extends ApiFrontend {
 //        ');
 
         parent::initLayout();
-    }
+    }*/
 }
 
 
